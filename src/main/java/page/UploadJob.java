@@ -13,7 +13,7 @@ public class UploadJob {
 	private WebElement title;
 	@FindBy(id="show-date")
 	private WebElement date;
-	@FindBy(id="default-btn")
+	@FindBy(xpath="//*[@id=\"default-btn\"]")
 	private WebElement btncover;
 	@FindBy(xpath="/html/body/div[3]/div[2]/div[2]/div/div[2]/div[2]/div[1]/div[1]/img")
 	private WebElement cover;

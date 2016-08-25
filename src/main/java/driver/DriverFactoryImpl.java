@@ -1,10 +1,9 @@
 package driver;
 
 import java.io.File;
-<<<<<<< HEAD
+
 import java.util.Set;
-=======
->>>>>>> 75fe5fe7b7906cc55df867a1b1db5015e8a16f62
+
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -56,8 +55,5 @@ public class DriverFactoryImpl implements IDriverFactory{
 				System.getProperty("webdriver.firefox.FirefoxBinary", "D:\\Mozilla Firefox\\firefox.exe")));
 		return new FirefoxDriver(binary, null);
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> 75fe5fe7b7906cc55df867a1b1db5015e8a16f62
+
 }
