@@ -17,7 +17,7 @@ public class DriverFactoryImpl implements IDriverFactory{
 	public RemoteWebDriver getDriver(Browser brower) {
 		RemoteWebDriver driver = null;
 		switch (brower) {
-		case CHROM_BROWER:
+		case CHROME_BROWER:
 			return getChromeWebDriver();
 		case FIREFOX_BROWER:
 			return getFirefoxWebDriver();
@@ -51,8 +51,10 @@ public class DriverFactoryImpl implements IDriverFactory{
 		return new InternetExplorerDriver(2035);
 	}
 	public RemoteWebDriver getFirefoxWebDriver(){
+		System.setProperty("webdriver.gecko.driver", "./src/test/resources/geckodriver.exe");
 		FirefoxBinary binary = new FirefoxBinary(new File(
-				System.getProperty("webdriver.firefox.FirefoxBinary", "D:\\Mozilla Firefox\\firefox.exe")));
+				 "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"));
+		
 		return new FirefoxDriver(binary, null);
 	}
 
